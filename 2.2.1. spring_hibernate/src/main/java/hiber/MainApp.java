@@ -32,13 +32,13 @@ public class MainApp {
       User user4 = new User("Olga", "Sidorova", "olga@mail.ru");
       user4.setCar(car4);
 
-      userService.add(user1);
-      userService.add(user2);
-      userService.add(user3);
-      userService.add(user4);
+      userService.addUser(user1);
+      userService.addUser(user2);
+      userService.addUser(user3);
+      userService.addUser(user4);
 
       System.out.println("==== All Users ====");
-      List<User> users = userService.listUsers();
+      List<User> users = userService.listAllUsers();
       for (User user : users) {
          System.out.printf(
                  "User: %s %s | Car: %s (Series: %d)%n",
