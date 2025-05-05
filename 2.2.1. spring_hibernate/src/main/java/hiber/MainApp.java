@@ -38,7 +38,7 @@ public class MainApp {
       userService.addUser(user4);
 
       System.out.println("==== All Users ====");
-      List<User> users = userService.listAllUsers();
+      List<User> users = userService.findAllUsers();
       for (User user : users) {
          System.out.printf(
                  "User: %s %s | Car: %s (Series: %d)%n",

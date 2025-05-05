@@ -10,7 +10,6 @@ import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Repository
-@Transactional
 public class UserDaoImp implements UserDao {
 
    private static final String HQL_GET_USER_BY_CAR =
@@ -25,7 +24,7 @@ public class UserDaoImp implements UserDao {
    }
 
    @Override
-   public List<User> listAllUsers() {
+   public List<User> findAllUsers() { // Или getAllUsers()
       TypedQuery<User> query = sessionFactory.getCurrentSession().createQuery("from User");
       return query.getResultList();
    }

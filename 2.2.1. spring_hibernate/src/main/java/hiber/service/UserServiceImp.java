@@ -24,9 +24,10 @@ public class UserServiceImp implements UserService {
       userDao.addUser(user);
    }
 
+   @Transactional(readOnly = true)
    @Override
-   public List<User> listAllUsers() {
-      return userDao.listAllUsers();
+   public List<User> findAllUsers() {
+      return userDao.findAllUsers();
    }
 
    @Transactional(readOnly = true)
